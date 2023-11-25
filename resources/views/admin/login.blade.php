@@ -12,107 +12,133 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
     <style>
-            .divider:after,
-            .divider:before {
-            content: "";
-            flex: 1;
-            height: 1px;
-            background: #eee;
-            box-shadow: #18c8d4
-            }
-            .h-custom {
-            height: calc(100% - 73px);
-            
-            }
-            .social-icons {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 10px;
-            }
+          .card{
+            height: 480px;
+            border-radius: 20px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+          }
+          
+          .login-start{
+          margin-top: 50px;
+          }
+          .card-title{
+            font-size: 40px;
 
-            .social-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: #dbdfe0; Sesuaikan dengan warna latar belakang Anda
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
-            }
+          }
+
+          .form-login{
+            margin-bottom: 10px;
+            font-size: 15px;
+            margin-top: 10px;
+          }
+
+          .form-check{
+            margin-left: 150px;
+            margin-bottom: 30px;
+          }
+
+          .daftar{
+            margin-top: 20px;
+          }
+
+          .row{
+            margin-right: 50px;
+          }
+
+          .btn-primary{
+            background-color: rgb(23, 177, 224);
+            border-radius: 20px;
+          }
+      
+          .social-icons {
+          display: flex;
+          }
+
+          .social-icon {
+            font-size: 20px;
+            margin: 0 10px;
+            border:  #d1cbcb; /* Warna border abu-abu */
+            padding: 8px;
+           
+          }
+
+          .facebook {
+            color: #1877f2; /* Warna Facebook */
+          }
+
+          .google {
+            color: #ea4335; /* Warna Google */
+          }
+
+          .instagram {
+            color: #bc2a8d; /* Warna Instagram */
+          }
     </style>
   </head>
   <body>
-    <section class="vh-100">
-        <div class="container-fluid h-custom">  
-          <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-md-9 col-lg-6 col-xl-5">
-              <img src="https://img.freepik.com/free-vector/female-smiling-librarian-standing-counter-book-shelf-paper-flat-vector-illustration-city-library-knowledge_74855-8364.jpg?w=740&t=st=1700819797~exp=1700820397~hmac=3b31a8a3fe7282691e2f60472960dc9bf9b2650348808e555c54dbb0ca84c2db"
-                class="img-fluid" alt="Sample image">
+   
+    <div class="container">
+      <div class="row justify-content-md-center">
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="card-kiri" style="width: 30rem;">
+            {{-- <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.dbl.id%2Fs%2Fprofile%2F7513%2Fsman-1-bogor&psig=AOvVaw0d2CWunuHMPoqwIh9RNT2S&ust=1700990023594000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCKDrwf7o3oIDFQAAAAAdAAAAABAE" class="card-img-top" alt="..."> --}}
+            <div class="card-body">
+              <h1 class="card-title-kiri" style="margin-top: 80px">Masuk Ke Aplikasi <span style="color: rgb(23, 177, 224)">SIPUS</span></h1>
+              <p class="card-text-kiri" style="font-size: 15px">Masuk ke aplikasi SIPUS untuk mengecek dan melihat daftar buku yang tersedia di perpustakaan SMAN 1 KOTA BOGOR</p>
             </div>
-            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-              <form>
-                <div class="d-flex flex-row align-items-center justify-content-center justify-content mt-3">
-                    <p>
-                      <h2>MASUK</h2>
-                  </p>
-                  </div>
+            <img src="https://img.freepik.com/free-vector/female-smiling-librarian-standing-counter-book-shelf-paper-flat-vector-illustration-city-library-knowledge_74855-8364.jpg?w=740&t=st=1700819797~exp=1700820397~hmac=3b31a8a3fe7282691e2f60472960dc9bf9b2650348808e555c54dbb0ca84c2db" width="100%" alt="">
+          </div>
+        </div>
+        <div class="col-md-auto">
+          <div class="login-start">
+            <div class="card" style="width: 20rem;">
+              <div class="card-body">
+                <h5 class="card-text">Selamat Datang di <span style="color:rgb(23, 177, 224) ">SIPUS</span></h5>
+                <p class="card-title">Masuk</p>
 
-                  {{-- <div class="social-icons">
-                    <div class="social-icon">
-                        <i class="fab fa-google"></i> --}}
-                      {{-- <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.png" alt="Google" width="30" height="30"> --}}
-                    {{-- </div>
-                    <div class="social-icon">
-                        <i class="fab fa-facebook"></i>
-                      {{-- <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook" width="30" height="30"> --}}
-                    {{-- </div>
-                    <div class="social-icon">
-                        <i class="fab fa-instagram"></i>
-                      {{-- <img src="https://upload.wikimedia.org/wikipedia/en/9/9f/Twitter_bird_logo_2012." alt="Twitter" width="30" height="30"> --}}
-                    {{-- </div>
-                  </div> -- --}}
-               
-                {{-- <div class="divider d-flex align-items-center my-4">
-                  <p class="text-center fw-bold mx-3 mb-0">Atau</p>
-                </div> --}}
-      
-                <!-- Email input -->
-                <div class="form-outline mb-2">
-                    <div class="col">
-                        <label class="form-label" for="form3Example3">Alamat Email</label>
-                      <input type="text" class="form-control" placeholder="Masukkan Alamat Email" aria-label="First name">
-                    </div>
-                </div>
-      
-                <!-- Password input -->
-                <div class="form-outline mb-2">
-                    <div class="col">
-                        <label class="form-label" for="form3Example3">Masukkan Password</label>
-                      <input type="text" class="form-control" placeholder="Masukkan Password" aria-label="First name">
-                    </div>
-                </div>
-      
-                <div class="d-flex justify-content-between align-items-center">
-                  <!-- Checkbox -->
-                  <div class="form-check mb-0">
+                <div class="social-icons">
+                  <div class="social-icon facebook">
+                    <i class="fab fa-facebook-f"></i>
                   </div>
-                  <a href="#!" class="link-primary">Lupa password?</a>
+                  <div class="social-icon google" style="margin-left: 70px">
+                    <i class="fab fa-google"></i>
+                  </div>
+                  <div class="social-icon instagram" style="margin-left: 70px">
+                    <i class="fab fa-instagram"></i>
+                  </div>
                 </div>
-      
-                <div class="text-center text-lg-start mt-2 pt-2 mt-8">
-                  <button type="button" class="btn btn-primary btn-lg"
-                    style="padding-left: 2.5rem; padding-right: 2.5rem;">Masuk</button>
-                  <p class="small fw-bold mt-2 pt-1 mb-0">Tidak mempunyai akun? <a href="#!"
-                      class="link-primary">Daftar sekarang</a></p>
-                </div>
-      
-              </form>
+
+
+                <form>
+                  <div class="form-login">
+                    <label for="exampleInputEmail1" class="form-label">Masukkan Alamat Email</label>
+                    <input type="email" class="form-control" placeholder="Username atau Alamat Email" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text"></div>
+                  </div>
+                  <div class="form-login">
+                    <label for="exampleInputPassword1" class="form-label">Masukkan Password Anda</label>
+                    <input type="password" class="form-control" placeholder="Password" id="exampleInputPassword1">
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Lupa Password</label>
+                  </div>
+                  <div class="d-grid gap-2 col-12 mx-auto">
+                    <button class="btn btn-primary" type="button">Masuk</button>
+                  </div>
+                  <div class="daftar">
+                    <p>Belum punya akun? <a href="#">Daftar</a></p>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
-      </section>
-
+      </div>
+    </div>
+    
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
