@@ -65,14 +65,14 @@
                   <div class="form-outline mb-1">
                     <div class="col">
                         <label class="form-label" for="form3Example3">Password</label>
-                      <input type="text" class="form-control" placeholder="Masukkan Password" aria-label="First name">
+                      <input type="password" class="form-control" placeholder="Masukkan Password" aria-label="First name">
                     </div>
                 </div>
 
                 <div class="form-outline mb-1">
                     <div class="col">
                         <label class="form-label" for="form3Example3">Konfirmasi Password</label>
-                      <input type="text" class="form-control" placeholder="Masukkan Konfirmasi Password" aria-label="First name">
+                      <input type="password" class="form-control" placeholder="Masukkan Konfirmasi Password" aria-label="First name">
                     </div>
                 </div>
       

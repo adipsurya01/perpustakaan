@@ -1,4 +1,4 @@
-@extends('template/app')
+@extends('template.app')
 
 
     @section('header')
@@ -623,7 +623,7 @@
                             <td>08123456789</td>
                             <td>Jl. Raya Bogor</td>
                             <td>
-                                <a href="#" class="btn btn-warning">Edit</a>
+                                <a href="#" class="btn btn-primary">Edit</a>
                                 <a href="#" class="btn btn-danger">Hapus</a>
                         </tbody>
                     </table>

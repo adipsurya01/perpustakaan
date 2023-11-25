@@ -1,3 +1,6 @@
+
+    
+    
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: rgb(195, 214, 195)">
         <!-- Brand Logo -->
@@ -30,7 +33,7 @@
             <!-- Add icons to the links using the .nav-icon class
                 with font-awesome or any other icon font library -->
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="/dashboard" class="nav-link">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
                     Dashboard
@@ -39,7 +42,7 @@
                 
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="/master-data" class="nav-link">
                 <i class="nav-icon fas fa-th"></i>
                 <p>
                     Master Data
@@ -48,28 +51,44 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="/data-anggota" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>Data Anggota</p>
                     </a>
                     </li>
                     <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="/data-administrator" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>Administrator</p>
                     </a>
                     </li>
                 </ul>
             
-            <li class="nav-item">
-                <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-book"></i>
-                <p>
-                    Katalog Buku
-                    <i class="fas fa-angle-down right"></i>
-                </p>
-                </a>
-            </li>
+                <li class="nav-item">
+                    <a href="/data-pinjaman" class="nav-link">
+                    <i class="nav-icon fas fa-book"></i>
+                    <p>
+                        Katalog Buku
+                        <i class="right fas fa-angle-down"></i>
+                    </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="/data-buku" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Data Buku</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/data-kategori" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Kategori Buku</p>
+                        </a>
+                    </li>
+                    </ul>
+                </li>
+
+            
                 {{-- <ul class="nav nav-treeview">
                 <li class="nav-item">
                     <a href="pages/layout/top-nav.html" class="nav-link">
@@ -122,7 +141,7 @@
                 </ul>
             </li> --}}
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="/data-pinjaman" class="nav-link">
                 <i class="nav-icon fas fa-book-reader"></i>
                 <p>
                     Data Pinjaman
@@ -131,112 +150,26 @@
                 </a>
                 <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="/peminjaman" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Data Buku</p>
+                    <p>Peminjaman</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="/pengembalian" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Kategori Buku</p>
+                    <p>Pengembalian</p>
                     </a>
                 </li>
                 </ul>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="/identitas-aplikasi" class="nav-link">
                 <i class="nav-icon fas fa-address-book"></i>
                 <p>
                     Identitas Aplikasi
                 </p>
                 </a>
-                {{-- <ul class="nav nav-treeview">
-                <li class="nav-item">
-                    <a href="pages/UI/general.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>General</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/UI/icons.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Icons</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/UI/buttons.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Buttons</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/UI/sliders.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Sliders</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/UI/modals.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Modals & Alerts</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/UI/navbar.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Navbar & Tabs</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/UI/timeline.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Timeline</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/UI/ribbons.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Ribbons</p>
-                    </a>
-                </li>
-                </ul> --}}
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-edit"></i>
-                <p>
-                    Laporan
-                </p>
-                </a>
-                <ul class="nav nav-treeview">
-                {{-- <li class="nav-item">
-                    <a href="pages/forms/general.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>General Elements</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/forms/advanced.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Advanced Elements</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/forms/editors.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Editors</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/forms/validation.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Validation</p>
-                    </a>
-                </li>
-                </ul>
-            </li> --}}
-            
             </li>
             
         </nav>
