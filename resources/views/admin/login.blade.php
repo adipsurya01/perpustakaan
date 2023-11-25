@@ -73,22 +73,22 @@
           .instagram {
             color: #bc2a8d; /* Warna Instagram */
           }
+
     </style>
   </head>
   <body>
-   
     <div class="container">
       <div class="row justify-content-md-center">
       </div>
       <div class="row">
         <div class="col">
-          <div class="card-kiri" style="width: 30rem;">
+          <div class="card-kiri" style="width: 40rem;">
             {{-- <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.dbl.id%2Fs%2Fprofile%2F7513%2Fsman-1-bogor&psig=AOvVaw0d2CWunuHMPoqwIh9RNT2S&ust=1700990023594000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCKDrwf7o3oIDFQAAAAAdAAAAABAE" class="card-img-top" alt="..."> --}}
-            <div class="card-body">
+            <div class="card-body" style="text-align: center">
               <h1 class="card-title-kiri" style="margin-top: 80px">Masuk Ke Aplikasi <span style="color: rgb(23, 177, 224)">SIPUS</span></h1>
               <p class="card-text-kiri" style="font-size: 15px">Masuk ke aplikasi SIPUS untuk mengecek dan melihat daftar buku yang tersedia di perpustakaan SMAN 1 KOTA BOGOR</p>
             </div>
-            <img src="https://img.freepik.com/free-vector/female-smiling-librarian-standing-counter-book-shelf-paper-flat-vector-illustration-city-library-knowledge_74855-8364.jpg?w=740&t=st=1700819797~exp=1700820397~hmac=3b31a8a3fe7282691e2f60472960dc9bf9b2650348808e555c54dbb0ca84c2db" width="100%" alt="">
+            <img src="{{asset('assets/img/logo.png')}}" style="margin-left: 190px" width="40%" alt="">
           </div>
         </div>
         <div class="col-md-auto">
@@ -109,7 +109,6 @@
                     <i class="fab fa-instagram"></i>
                   </div>
                 </div>
-
 
                 <form>
                   <div class="form-login">

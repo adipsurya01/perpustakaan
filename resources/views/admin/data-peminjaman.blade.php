@@ -24,7 +24,7 @@
 
 
     {{-- tabel aksi --}}
-    <div class="container" style="">
+    <div class="container">
         <div class="card">
             <h5 style="margin:20px ">DATA PEMINJAMAN</h5>
             

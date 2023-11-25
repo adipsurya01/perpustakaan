@@ -29,7 +29,7 @@
         <div class="row">
             <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-white">
+            <div class="small-box bg-green">
                 <div class="inner">
                 <h3>150</h3>
                 <p>Total Siswa</p>
@@ -42,7 +42,7 @@
             <!-- ./col -->
             <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-white">
+            <div class="small-box bg-blue">
                 <div class="inner">
                 <h3>53</h3>
                 <p>Total Buku</p>
@@ -57,7 +57,7 @@
             <!-- ./col -->
             <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-white">
+            <div class="small-box bg-red">
                 <div class="inner">
                 <h3>44</h3>
                 <p>Pinjaman</p>
@@ -71,7 +71,7 @@
             <!-- ./col -->
             <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-white">
+            <div class="small-box bg-yellow">
                 <div class="inner">
                 <h3>65</h3>
                 <p>Pengembalian</p>

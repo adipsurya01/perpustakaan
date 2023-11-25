@@ -25,7 +25,7 @@
 
 
     {{-- tabel aksi --}}
-    <div class="container" style="margin-top:50px">
+    <div class="container">
         <div class="card">
             <h5 style="margin:20px ">TRANSAKSI PEMINJAMAN</h5>
 

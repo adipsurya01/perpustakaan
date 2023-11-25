@@ -25,7 +25,7 @@
 
 
     {{-- tabel aksi --}}
-    <div class="container-fluid-center" style="margin-top:50px">
+    <div class="container-fluid-center">
         <div class="card">
             <h5 style="margin:20px ">KATEGORI BUKU</h5>
             <div class="d-grid gap-2 d-md-block" style="margin-left:20px">
@@ -41,7 +41,7 @@
                         <th>1</th>
                         <td>Komputer</td>
                         <td>
-                            <a href="#" class="btn btn-warning">Edit</a>
+                            <a href="#" class="btn btn-primary">Edit</a>
                             <a href="#" class="btn btn-danger">Hapus</a>
                     </tbody>
                 </table>

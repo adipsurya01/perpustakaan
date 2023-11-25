@@ -25,7 +25,7 @@
 
 
     {{-- tabel aksi --}}
-    <div class="container" style="margin-top:50px">
+    <div class="container">
         <div class="card">
             <h5 style="margin:20px ">ADMINISTRATOR</h5>
             <div class="d-grid gap-2 d-md-block" style="margin-left:20px">

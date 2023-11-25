@@ -25,7 +25,7 @@
 
 
     {{-- tabel aksi --}}
-    <div class="container" style="margin-top:50px">
+    <div class="container">
         <div class="card">
             <h5 style="margin:20px ">DATA BUKU</h5>
             <div class="d-grid gap-2 d-md-block" style="margin-left:20px">
@@ -49,7 +49,7 @@
                         <td>80</td>
                         <td>100</td>
                         <td>
-                            <a href="#" class="btn btn-warning">Edit</a>
+                            <a href="#" class="btn btn-primary">Edit</a>
                             <a href="#" class="btn btn-danger">Hapus</a>
                     </tbody>
                 </table>
