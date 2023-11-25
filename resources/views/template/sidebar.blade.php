@@ -1,7 +1,4 @@
 
- 
-
-    
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: rgb(195, 214, 195)">
         <!-- Brand Logo -->
@@ -32,16 +29,16 @@
         <nav class="mt-2" >
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <li class="nav-item">
-                <a href="/dashboard" class="nav-link">
+                <a href="/dashboard" class="nav-link {{ $active == "dashboard" ? 'active' : '' }}">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
-                    Dashboard
+                    Dashboard 
                 </p>
                 </a>
                 
             </li>
-            <li class="nav-item">
-                <a href="/master-data" class="nav-link">
+            <li class="nav-item {{ $active == "data-anggota" ? 'menu-is-opening menu-open' : ( $active == "data-administrator" ?  'menu-is-opening menu-open' : '' ) }}">
+                <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-th"></i>
                 <p>
                     Master Data
@@ -50,20 +47,20 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                    <a href="/data-anggota" class="nav-link">
+                    <a href="/data-anggota" class="nav-link {{ $active == "data-anggota" ? 'active' : '' }}">
                         <i class="far fa-circle nav-icon"></i>
                         <p>Data Anggota</p>
                     </a>
                     </li>
                     <li class="nav-item">
-                    <a href="/data-administrator" class="nav-link">
+                    <a href="/data-administrator" class="nav-link {{ $active == "data-administrator" ? 'active' : '' }}">
                         <i class="far fa-circle nav-icon"></i>
                         <p>Administrator</p>
                     </a>
                     </li>
                 </ul>
             
-                <li class="nav-item">
+                <li class="nav-item {{ $active == "data-buku" ? 'menu-is-opening menu-open' : ( $active == "data-kategori" ?  'menu-is-opening menu-open' : '' ) }}">
                     <a href="/data-pinjaman" class="nav-link">
                     <i class="nav-icon fas fa-book"></i>
                     <p>
@@ -73,74 +70,22 @@
                     </a>
                     <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="/data-buku" class="nav-link">
+                        <a href="/data-buku" class="nav-link {{ $active == "data-buku" ? 'active' : '' }}">
                         <i class="far fa-circle nav-icon"></i>
                         <p>Data Buku</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="/data-kategori" class="nav-link">
+                        <a href="/data-kategori" class="nav-link {{ $active == "data-kategori" ? 'active' : '' }}">
                         <i class="far fa-circle nav-icon"></i>
                         <p>Kategori Buku</p>
                         </a>
                     </li>
                     </ul>
                 </li>
-
-            
-                {{-- <ul class="nav nav-treeview">
-                <li class="nav-item">
-                    <a href="pages/layout/top-nav.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Data Pinjaman</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Top Navigation + Sidebar</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/layout/boxed.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Boxed</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/layout/fixed-sidebar.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Fixed Sidebar</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/layout/fixed-sidebar-custom.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Fixed Sidebar <small>+ Custom Area</small></p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/layout/fixed-topnav.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Fixed Navbar</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/layout/fixed-footer.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Fixed Footer</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="pages/layout/collapsed-sidebar.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Collapsed Sidebar</p>
-                    </a>
-                </li>
-                </ul>
-            </li> --}}
-            <li class="nav-item">
-                <a href="/data-pinjaman" class="nav-link">
+            </li>
+            <li class="nav-item {{ $active == "peminjaman" ? 'menu-is-opening menu-open' : ( $active == "data-pengembalian" ?  'menu-is-opening menu-open' : '' ) }}">
+                <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-book-reader"></i>
                 <p>
                     Data Pinjaman
@@ -149,13 +94,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="/peminjaman" class="nav-link">
+                    <a href="/peminjaman" class="nav-link {{ $active == "peminjaman" ? 'active' : '' }}">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Peminjaman</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/pengembalian" class="nav-link">
+                    <a href="/pengembalian" class="nav-link {{ $active == "data-pengembalian" ? 'active' : '' }}">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Pengembalian</p>
                     </a>
@@ -163,7 +108,7 @@
                 </ul>
             </li>
             <li class="nav-item">
-                <a href="/identitas-aplikasi" class="nav-link">
+                <a href="/identitas-aplikasi" class="nav-link {{ $active == "identitas-aplikasi" ? 'active' : '' }}">
                 <i class="nav-icon fas fa-address-book"></i>
                 <p>
                     Identitas Aplikasi

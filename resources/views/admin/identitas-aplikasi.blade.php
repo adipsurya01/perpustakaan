@@ -26,7 +26,7 @@
     {{-- tabel aksi --}}
     <div class="container" style="">
         <div class="card">
-            <h5 style="margin:20px ">EDIT EDINTITAS APLIKASI</h5>
+            <h5 style="margin:20px ">EDIT IDENTITAS APLIKASI</h5>
             
                 <div class="mb-3 row m-3">
                     <label for="inputAplikasi" class="col-sm-2 col-form-label">Nama Aplikasi</label>

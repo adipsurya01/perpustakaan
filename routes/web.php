@@ -20,7 +20,9 @@ Route::get('/', function () {
 Route::resource('admin', TemplateController::class); 
 
 Route::get('/dashboard', function () {
-    return view('admin/dashboard');
+    return view('admin/dashboard', [
+        "active" => "dashboard"
+    ]);
       
 });
 
@@ -33,50 +35,73 @@ Route::get('/register', function () {
 });
 
 Route::get('/data-anggota', function () {
-    return view('admin/data-anggota');
+    return view('admin/data-anggota', [
+        'active'=> 'data-anggota'
+    ]);
 });
 
 Route::get('/data-administrator', function () {
-    return view('admin/data-administrator');
+    return view('admin/data-administrator', [
+        'active'=> 'data-administrator'
+    ]);
 });
 
 Route::get('/data-buku', function () {
-    return view('admin/data-buku');
+    return view('admin/data-buku', [
+        'active'=> 'data-buku'
+    ]);
 });
 
 Route::get('/data-kategori', function () {
-    return view('admin/data-kategori');
-});
-
-Route::get('/data-kategori', function () {
-    return view('admin/data-kategori');
+    return view('admin/data-kategori', [
+        'active'=> 'data-kategori'
+    ]);
 });
 
 Route::get('/tambah-anggota', function () {
-    return view('admin/tambah-anggota');
+    return view('admin/tambah-anggota', [
+        'active'=> 'tambah-anggota'
+    ]);
 });
 
 Route::get('/tambah-administrator', function () {
-    return view('admin/tambah-administrator');
+    return view('admin/tambah-administrator', [
+        'active'=> 'tambah-administrator'
+    ]);
 });
 
 Route::get('/tambah-buku', function () {
-    return view('admin/tambah-buku');
+    return view('admin/tambah-buku', [
+        'active'=> 'tambah-buku'
+    ]);
 });
 
 Route::get('/tambah-kategori', function () {
-    return view('admin/tambah-kategori');
+    return view('admin/tambah-kategori', [
+        'active'=> 'tambah-kategori'
+    ]);
 });
 
 Route::get('/peminjaman', function () {
-    return view('admin/peminjaman');
+    return view('admin/peminjaman', [
+        'active'=> 'peminjaman'
+    ]);
 });
 
 Route::get('/data-peminjaman', function () {
-    return view('admin/data-peminjaman');
+    return view('admin/data-peminjaman', [
+        'active'=> 'data-peminjaman'
+    ]);
+});
+
+Route::get('/data-pengembalian', function () {
+    return view('admin/data-pengembalian', [
+        'active'=> 'data-pengembalian'
+    ]);
 });
 
 Route::get('/identitas-aplikasi', function () {
-    return view('admin/identitas-aplikasi');
+    return view('admin/identitas-aplikasi', [
+        'active'=> 'identitas-aplikasi'
+    ]);
 });
-
