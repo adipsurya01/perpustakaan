@@ -105,3 +105,7 @@ Route::get('/identitas-aplikasi', function () {
         'active'=> 'identitas-aplikasi'
     ]);
 });
+
+Route::get('/katalog-buku', function () {
+    return view('admin/katalog-buku');
+});
