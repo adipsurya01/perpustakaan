@@ -21,9 +21,29 @@
 <!-- /.content-header -->
 @endsection
 
+@section("script")
+    <script>
+        Alpine.data("data", () => ({
+            books: [],
+            init() {
+                fetch("http://localhost:3030/books", {
+                    method: "GET",
+                    headers: {
+                        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NWFmYTQ3NzFmYjJhNDY1YTdhY2FhYiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcwMTE0ODQ5MSwiZXhwIjoxNzAxMjM0ODkxfQ.MwDVsNjPhC3SGlWM9CgLlZJz4Of-jPgexgRa_JokxEg"
+                    }
+                }).then(data => data.json()).then(data => this.books = data.data)
+            },
+            edit(data) {
+                console.log("edit", data)
+            },
+            delete(data) {
+                console.log("delete", data)
+            }
+        }))
+    </script>
+@endsection
+
 @section('content')
-
-
     {{-- tabel aksi --}}
     <div class="container">
         <div class="card">
@@ -42,15 +62,20 @@
                         <th>Aksi</th>
                     </thead>
                     <tbody>
-                        <th>1</th>
-                        <td>Kancil dan Rusa</td>
-                        <td>Adip</td>
-                        <td>Universitas Negeri Jakarta</td>
-                        <td>80</td>
-                        <td>100</td>
-                        <td>
-                            <a href="#" class="btn btn-primary">Edit</a>
-                            <a href="#" class="btn btn-danger">Hapus</a>
+                        <template x-for="b in books">
+                            <tr>
+                                <td x-html="b.id"></td>
+                                <td x-html="b.title"></td>
+                                <td x-html="b.author"></td>
+                                <td x-html="b.publisher"></td>
+                                <td x-html="b.stock"></td>
+                                <td x-html="b.pages"></td>
+                                <td>
+                                    <a href="javascript:;" class="btn btn-primary" x-on:click="edit(b)">Edit</a>
+                                    <a href="javascript:;" class="btn btn-danger" x-on:click="delete(b)">Hapus</a>
+                                </td>
+                            </tr>
+                        </template>
                     </tbody>
                 </table>
             </div>
