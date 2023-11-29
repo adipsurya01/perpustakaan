@@ -78,7 +78,4 @@
             <button class="btn btn-danger" type="button">Batal</button>
           </div>
 
-
-    
-
 @endsection

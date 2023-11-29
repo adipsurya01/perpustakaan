@@ -24,17 +24,20 @@
 @section("script")
     <script>
         Alpine.data("data", () => ({
+            
             books: [],
             init() {
+                const aksestoken = localStorage.getItem('aksestoken');
                 fetch("http://localhost:3030/books", {
                     method: "GET",
                     headers: {
-                        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NWFmYTQ3NzFmYjJhNDY1YTdhY2FhYiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcwMTE0ODQ5MSwiZXhwIjoxNzAxMjM0ODkxfQ.MwDVsNjPhC3SGlWM9CgLlZJz4Of-jPgexgRa_JokxEg"
+                        "Authorization": "Bearer "+ aksestoken 
                     }
                 }).then(data => data.json()).then(data => this.books = data.data)
             },
             edit(data) {
-                console.log("edit", data)
+                console.log("edit", data._id)
+                location.href = `/update-buku?id=${data._id}`
             },
             delete(data) {
                 console.log("delete", data)
@@ -45,7 +48,7 @@
 
 @section('content')
     {{-- tabel aksi --}}
-    <div class="container">
+    <div class="container" x-data="data">
         <div class="card">
             <h5 style="margin:20px ">DATA BUKU</h5>
             <div class="d-grid gap-2 d-md-block" style="margin-left:20px">
@@ -62,9 +65,9 @@
                         <th>Aksi</th>
                     </thead>
                     <tbody>
-                        <template x-for="b in books">
+                        <template x-for="(b, index) in books">
                             <tr>
-                                <td x-html="b.id"></td>
+                                <td x-html="index + 1"></td>
                                 <td x-html="b.title"></td>
                                 <td x-html="b.author"></td>
                                 <td x-html="b.publisher"></td>

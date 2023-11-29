@@ -29,7 +29,7 @@
         <nav class="mt-2" >
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <li class="nav-item">
-                <a href="/dashboard" class="nav-link {{ $active == "dashboard" ? 'active' : '' }}">
+                <a href="/dashboard" class="nav-link ">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
                     Dashboard 
@@ -37,7 +37,7 @@
                 </a>
                 
             </li>
-            <li class="nav-item {{ $active == "data-anggota" ? 'menu-is-opening menu-open' : ( $active == "data-administrator" ?  'menu-is-opening menu-open' : '' ) }}">
+            <li class="nav-item ">
                 <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-th"></i>
                 <p>
@@ -47,20 +47,20 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                    <a href="/data-anggota" class="nav-link {{ $active == "data-anggota" ? 'active' : '' }}">
+                    <a href="/data-anggota" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>Data Anggota</p>
                     </a>
                     </li>
                     <li class="nav-item">
-                    <a href="/data-administrator" class="nav-link {{ $active == "data-administrator" ? 'active' : '' }}">
+                    <a href="/data-administrator" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>Administrator</p>
                     </a>
                     </li>
                 </ul>
             
-                <li class="nav-item {{ $active == "data-buku" ? 'menu-is-opening menu-open' : ( $active == "data-kategori" ?  'menu-is-opening menu-open' : '' ) }}">
+                <li class="nav-item ">
                     <a href="/data-pinjaman" class="nav-link">
                     <i class="nav-icon fas fa-book"></i>
                     <p>
@@ -70,7 +70,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="/data-buku" class="nav-link {{ $active == "data-buku" ? 'active' : '' }}">
+                        <a href="/data-buku" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>Data Buku</p>
                         </a>

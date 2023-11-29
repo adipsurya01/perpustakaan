@@ -20,11 +20,34 @@
 <!-- /.content-header -->
 @endsection
 
+@section("script")
+    <script>
+        Alpine.data("data", () => ({
+            
+            members: [],
+            init() {
+                const aksestoken = localStorage.getItem('aksestoken');
+                fetch("http://localhost:3030/members", {
+                    method: "GET",
+                    headers: {
+                        "Authorization": "Bearer "+ aksestoken 
+                    }
+                }).then(data => data.json()).then(data => this.members = data.data)
+            },
+            edit(data) {
+                console.log("edit", data._id)
+                location.href = `/update-anggota?id=${data._id}`
+            },
+            delete(data) {
+                console.log("delete", data)
+            }
+        }))
+    </script>
+@endsection
+
 @section('content')
-
-
     {{-- tabel aksi --}}
-    <div class="container" style="">
+    <div class="container" style="" x-data="data">
         <div class="card">
             <h5 style="margin:20px ">DATA ANGGOTA</h5>
             <div class="d-grid gap-2 d-md-block" style="margin-left:20px">
@@ -40,14 +63,19 @@
                         <th>Aksi</th>
                     </thead>
                     <tbody>
-                        <th>1</th>
-                        <td>Adip Idi Surya</td>
-                        <td>adip@gmail.com</td>
-                        <td>08123456789</td>
-                        <td>Jl. Raya Bogor</td>
-                        <td>
-                            <a href="#" class="btn btn-primary">Edit</a>
-                            <a href="#" class="btn btn-danger">Hapus</a>
+                        <template x-for="(b, index) in members">
+                            <tr>
+                                <td x-html="index + 1"></td>
+                                <td x-html="b.fullname"></td>
+                                <td x-html="b.email"></td>
+                                <td x-html="b.puhone"></td>
+                                <td x-html="b.addres"></td>
+                                <td>
+                                    <a href="javascript:;" class="btn btn-primary" x-on:click="edit(b)">Edit</a>
+                                    <a href="javascript:;" class="btn btn-danger" x-on:click="delete(b)">Hapus</a>
+                                </td>
+                            </tr>
+                        </template>
                     </tbody>
                 </table>
             </div>

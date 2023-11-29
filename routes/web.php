@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('admin/login');
 });
 
 Route::resource('admin', TemplateController::class); 
@@ -73,6 +73,19 @@ Route::get('/tambah-administrator', function () {
 Route::get('/tambah-buku', function () {
     return view('admin/tambah-buku', [
         'active'=> 'tambah-buku'
+    ]);
+});
+
+// Route::post('/update-buku', function () {
+//     return view('admin/update-buku', [
+//         'active'=> 'update-buku'
+//     ]);
+// });
+
+Route::put('/update-buku{id}', function ($id) {
+    return view('admin/update-buku', [
+        'active'=> 'update-buku/', 
+        'id'=> '$id'
     ]);
 });
 
