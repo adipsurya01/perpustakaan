@@ -57,7 +57,7 @@
         <div class="mb-3 row m-3 ">
             <label for="inputIsbn" class="col-sm-2 col-form-label">ISBN</label>
             <div class="col-sm-8">
-              <input type="text" class="form-control"  placeholder="Masukkan ISBN" id="inputIsbn">
+              <input type="text" class="form-control"   placeholder="Masukkan ISBN" id="inputIsbn">
             </div>
         </div>
         <div class="mb-3 row m-3 ">

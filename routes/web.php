@@ -21,7 +21,7 @@ Route::resource('admin', TemplateController::class);
 
 Route::get('/dashboard', function () {
     return view('admin/dashboard', [
-        "active" => "dashboard"
+        'active' => "dashboard"
     ]);
       
 });
@@ -108,4 +108,16 @@ Route::get('/identitas-aplikasi', function () {
 
 Route::get('/katalog-buku', function () {
     return view('admin/katalog-buku');
+});
+
+Route::get('/update-anggota', function () {
+    return view('admin/update-anggota', [
+        'active'=> 'update-anggota'
+    ]);
+});
+
+Route::get('/update-administrator', function () {
+    return view('admin/update-administrator', [
+        'active'=> 'update-administrator'
+    ]);
 });

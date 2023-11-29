@@ -2,7 +2,7 @@
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: rgb(195, 214, 195)">
         <!-- Brand Logo -->
-        <a href="index3.html" class="brand-link">
+        <a href="#" class="brand-link">
         <img src="{{asset('assets/img/logo.png')}}" alt=" " class="brand-image img-circle elevation-3" style="opacity: .8">
         <span style="color:rgb(0, 0, 0)"><strong>SMAN 1 Kota Bogor</strong></span>
         </a>
@@ -15,7 +15,7 @@
             <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-            <a href="#" class="d-block">
+            <a href="/login" class="d-block">
                 <p>Admin 1
                     <i class="right fas fa-angle-down" style="margin-left: 5px"></i>
                 </p>

@@ -125,10 +125,10 @@
                     <label class="form-check-label" for="exampleCheck1">Lupa Password</label>
                   </div>
                   <div class="d-grid gap-2 col-12 mx-auto">
-                    <button class="btn btn-primary" type="button">Masuk</button>
+                    <a class="btn btn-primary" href="/dashboard" role="button">Masuk</a>
                   </div>
                   <div class="daftar">
-                    <p>Belum punya akun? <a href="#">Daftar</a></p>
+                    <p>Belum punya akun? <a href="/register">Daftar</a></p>
                   </div>
                 </form>
               </div>
