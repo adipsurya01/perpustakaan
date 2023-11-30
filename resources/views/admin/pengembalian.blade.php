@@ -44,7 +44,7 @@
             <div class="mb-3 row m-3">
                 <label for="inputJudul" class="col-sm-2 col-form-label">Judul Buku</label>
                 <div class="col-sm-8">
-                  <input type="password" class="form-control"  placeholder="Masukkan Password Email" id="inputJudul">
+                  <input type="password" class="form-control"  placeholder="Masukkan Password" id="inputJudul">
                 </div>
             </div>
             <div class="mb-3 row m-3">

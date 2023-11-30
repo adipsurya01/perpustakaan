@@ -70,9 +70,22 @@ Route::get('/tambah-administrator', function () {
     ]);
 });
 
+Route::get('/update-buku/{id}', function ($id) {
+    return view('admin/update-buku', [
+        'active'=> 'data-buku',
+        "id" => $id
+    ]);
+});
+
 Route::get('/tambah-buku', function () {
     return view('admin/tambah-buku', [
-        'active'=> 'tambah-buku'
+        'active'=> 'data-buku'
+    ]);
+});
+
+Route::get('/tambah-peminjaman', function () {
+    return view('admin/tambah-peminjaman', [
+        'active'=> 'peminjaman'
     ]);
 });
 
@@ -110,15 +123,17 @@ Route::get('/katalog-buku', function () {
     return view('admin/katalog-buku');
 });
 
-Route::get('/update-anggota', function () {
+Route::get('/update-anggota/{id}', function ($id) {
     return view('admin/update-anggota', [
-        'active'=> 'update-anggota'
+        'active'=> 'update-anggota',
+        'id' => $id
     ]);
 });
 
-Route::get('/update-administrator', function () {
+Route::get('/update-administrator/{id}', function ($id) {
     return view('admin/update-administrator', [
-        'active'=> 'update-administrator'
+        'active'=> 'update-administrator',
+        'id' => $id
     ]);
 });
 

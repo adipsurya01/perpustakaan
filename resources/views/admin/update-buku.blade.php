@@ -6,7 +6,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Tambah Data Buku</h1>
+                    <h1 class="m-0">Update Data Buku</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -32,10 +32,34 @@
             "pages": 0,
             "isbn": 0,
             "stock": 0,
-            add() {
+            "id": "{{ $id }}",
+            "_method": "PUT",
+            init() {
                 let token = localStorage.getItem("token")
-                fetch("http://0.0.0.0:3030/books", {
-                    method: "POST",
+                fetch(`http://0.0.0.0:3030/books?id=${this.id}`, {
+                    method: "GET",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Authorization": `Bearer ${token}`
+                    },
+                }).then(res => res.json()).then(res => {
+                    for (k in res.data) {
+                        if (k == "published") res.data[k] = this.formatDate(res.data[k])
+                        this[k] = res.data[k]
+                    }
+                })
+            },
+            formatDate(date) {
+                let d = new Date(date)
+                let dt = d.getDate() < 10 ? `0${d.getDate()}` : d.getDate();
+                let m = d.getMonth() < 10 ? `0${d.getMonth()+1}` : d.getMonth() + 1;
+                return `${d.getFullYear()}-${m}-${dt}`
+            },
+            edit() {
+                let token = localStorage.getItem("token")
+                console.log(JSON.stringify(this))
+                fetch(`http://0.0.0.0:3030/books/${this.id}`, {
+                    method: "PUT",
                     headers: {
                         "Content-Type": "application/json",
                         "Authorization": `Bearer ${token}`
@@ -109,7 +133,7 @@
             </div>
 
             <div class="d-grid gap-2 d-md-block p-3" style="margin-left: 182px; gap:50px">
-                <button x-on:click="add" class="btn btn-primary" type="button">Tambah</button>
+                <button x-on:click="edit" class="btn btn-primary" type="button">Edit</button>
                 <a href="/data-buku" class="btn btn-danger" type="button">Batal</a>
             </div>
         </div>
