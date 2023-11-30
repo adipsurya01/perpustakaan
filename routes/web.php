@@ -121,3 +121,10 @@ Route::get('/update-administrator', function () {
         'active'=> 'update-administrator'
     ]);
 });
+
+Route::get('/pengembalian', function () {
+    return view('admin/pengembalian', [
+        'active'=> 'pengembalian'
+    ]);
+});
+
