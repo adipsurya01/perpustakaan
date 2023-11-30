@@ -41,7 +41,7 @@ Alpine.data("data", () => ({
     books: [],
     init() {
         const aksestoken = localStorage.getItem('aksestoken');
-        fetch(`http://localhost:3030/books/{{ $id }}`, {
+        fetch(`http://localhost:3030/books?id={{ $id }}`, {
             method: "PUT",
             headers: {
                 "Authorization": "Bearer " + aksestoken
@@ -53,7 +53,7 @@ Alpine.data("data", () => ({
 }))
 </script>
 @endsection @section('content')
-<div class="container" style="">
+<div class="container" style="" x-data="data">
 <div class="card">
     <h5 style="margin:20px ">UPDATE DATA BUKU</h5>
     <div class="mb-3 row m-3">
@@ -61,16 +61,18 @@ Alpine.data("data", () => ({
         <div class="col-sm-8">
             <input
                 type="text"
-                x-html="title"
+                x-model="title"
                 class="form-control"
-                placeholder="Masukkan Judul Buku"
-                
+                x-placeholder="title"
+                x-value="title"
                 id="inputJudulBuku"></div>
+
         </div>
         <div class="mb-3 row m-3">
             <label for="inputKategori" class="col-sm-2 col-form-label">Kategori Buku</label>
             <div class="col-sm-8">
                 <input
+                x-value="category"
                     type="text"
                     class="form-control"
                     placeholder="Masukkan Kategori Buku"

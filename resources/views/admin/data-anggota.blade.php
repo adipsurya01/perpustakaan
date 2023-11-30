@@ -36,7 +36,7 @@
             },
             edit(data) {
                 console.log("edit", data._id)
-                location.href = `/update-anggota?id=${data._id}`
+                location.href = `/update-anggota/${data._id}`
             },
             delete(data) {
                 console.log("delete", data)
@@ -63,13 +63,13 @@
                         <th>Aksi</th>
                     </thead>
                     <tbody>
-                        <template x-for="(b, index) in members">
+                        <template x-for="(b, index) in members ">
                             <tr>
                                 <td x-html="index + 1"></td>
                                 <td x-html="b.fullname"></td>
                                 <td x-html="b.email"></td>
-                                <td x-html="b.puhone"></td>
-                                <td x-html="b.addres"></td>
+                                <td x-html="b.phone"></td>
+                                <td x-html="b.address"></td>
                                 <td>
                                     <a href="javascript:;" class="btn btn-primary" x-on:click="edit(b)">Edit</a>
                                     <a href="javascript:;" class="btn btn-danger" x-on:click="delete(b)">Hapus</a>

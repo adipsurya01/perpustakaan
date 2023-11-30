@@ -37,7 +37,7 @@
             },
             edit(data) {
                 console.log("edit", data._id)
-                location.href = `/update-buku?id=${data._id}`
+                location.href = `/update-buku/${data._id}`
             },
             delete(data) {
                 console.log("delete", data)

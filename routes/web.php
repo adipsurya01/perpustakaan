@@ -82,7 +82,13 @@ Route::get('/tambah-buku', function () {
 //     ]);
 // });
 
-Route::put('/update-buku{id}', function ($id) {
+Route::get('/update-buku/{id}', function ($id) {
+    return view('admin/update-buku', [
+        'active'=> 'update-buku/', 
+        'id'=> '$id'
+    ]);
+});
+Route::put('/update-buku/{id}', function ($id) {
     return view('admin/update-buku', [
         'active'=> 'update-buku/', 
         'id'=> '$id'
@@ -120,5 +126,7 @@ Route::get('/identitas-aplikasi', function () {
 });
 
 Route::get('/katalog-buku', function () {
-    return view('admin/katalog-buku');
+    return view('admin/katalog-buku', [
+        'active'=> 'katalog-buku'
+    ]);
 });
