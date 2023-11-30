@@ -73,6 +73,7 @@
                     localStorage.setItem("token", res.data.accessToken)
                     localStorage.setItem("name", res.data.fullname)
                     localStorage.setItem("role", res.data.role)
+                    localStorage.setItem("id", res.data._id)
                     location.href = "/dashboard"
                 })
             }

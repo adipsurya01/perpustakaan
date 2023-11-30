@@ -31,7 +31,7 @@
                 data-accordion="false">
                 <li class="nav-item">
                     <a href="/dashboard" class="nav-link {{ $active == 'dashboard' ? 'active' : '' }}">
-                        <i x-bind:class="role == 'admin' ? 'fa-tachometer-alt' : 'fa-book-reader'" class="nav-icon fas"></i>
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Dashboard
                         </p>
