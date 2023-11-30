@@ -1,13 +1,12 @@
 @extends('template.app')
 
-
 @section('header')
 <!-- Content Header (Page header) -->
 <div class="content-header">
     <div class="container-fluid">
     <div class="row mb-2">
         <div class="col-sm-6">
-        <h1 class="m-0">Data Administrator</h1>
+        <h1 class="m-0">Data Anggota</h1>
         </div><!-- /.col -->
         <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
@@ -25,11 +24,11 @@
 
 
     {{-- tabel aksi --}}
-    <div class="container">
+    <div class="container" >
         <div class="card">
-            <h5 style="margin:20px ">ADMINISTRATOR</h5>
+            <h5 style="margin:20px ">DATA ANGGOTA</h5>
             <div class="d-grid gap-2 d-md-block" style="margin-left:20px">
-                <a class="btn btn-outline-light" href="/tambah-administrator" role="button"style="background-color: #000851">Tambah Administrator</a>
+                <a class="btn btn-outline-light" href="/tambah-anggota" role="button" style="background-color: #000851">Tambah Anggota</a>
             <div class="card-body">
                 <table class="table">
                     <thead>
@@ -47,8 +46,8 @@
                         <td>08123456789</td>
                         <td>Jl. Raya Bogor</td>
                         <td>
-                            <a href="/update-administrator" class="btn btn-primary">Edit</a>
-                            <a href="#" class="btn btn-danger">Hapus</a>
+                            <a href="/update-anggota" class="btn btn-primary">Edit</a>
+                            <a href="" class="btn btn-danger">Hapus</a>
                     </tbody>
                 </table>
             </div>

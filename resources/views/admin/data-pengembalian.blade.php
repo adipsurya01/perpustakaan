@@ -1,13 +1,12 @@
 @extends('template.app')
 
-
 @section('header')
 <!-- Content Header (Page header) -->
 <div class="content-header">
     <div class="container-fluid">
     <div class="row mb-2">
         <div class="col-sm-6">
-        <h1 class="m-0">Data Administrator</h1>
+        <h1 class="m-0">Pengembalian</h1>
         </div><!-- /.col -->
         <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
@@ -27,28 +26,28 @@
     {{-- tabel aksi --}}
     <div class="container">
         <div class="card">
-            <h5 style="margin:20px ">ADMINISTRATOR</h5>
-            <div class="d-grid gap-2 d-md-block" style="margin-left:20px">
-                <a class="btn btn-outline-light" href="/tambah-administrator" role="button"style="background-color: #000851">Tambah Administrator</a>
+            <h5 style="margin:20px ">DATA PENGEMBALIAN</h5>
+            
             <div class="card-body">
                 <table class="table">
                     <thead>
                         <th>No</th>
-                        <th>Nama</th>
-                        <th>Email</th>
-                        <th>Telepon</th>
-                        <th>Alamat</th>
+                        <th>Judul</th>
+                        <th>Nama Peminjam</th>
+                        <th>Tgl.Pinjam</th>
+                        <th>Tgl.Kembali</th>
+                        <th>Status</th>
                         <th>Aksi</th>
                     </thead>
                     <tbody>
                         <th>1</th>
-                        <td>Adip Idi Surya</td>
-                        <td>adip@gmail.com</td>
-                        <td>08123456789</td>
-                        <td>Jl. Raya Bogor</td>
+                        <td>Basis Data</td>
+                        <td>Adip</td>
+                        <td>20/04/2023</td>
+                        <td>21/04/2023</td>
+                        <td>Dipinjam</td>
                         <td>
-                            <a href="/update-administrator" class="btn btn-primary">Edit</a>
-                            <a href="#" class="btn btn-danger">Hapus</a>
+                            <a href="#" class="btn btn-primary">Selesai</a>
                     </tbody>
                 </table>
             </div>

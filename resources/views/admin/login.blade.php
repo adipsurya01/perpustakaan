@@ -151,48 +151,35 @@
                                     </div>
                                 </div>
 
-                                <form>
-                                    <div class="form-login">
-                                        <label for="exampleInputEmail1" class="form-label">Masukkan Alamat Email</label>
-                                        <input
-                                            x-model="email"
-                                            type="email"
-                                            class="form-control"
-                                            placeholder="Username atau Alamat Email"
-                                            id="exampleInputEmail"
-                                            aria-describedby="emailHelp">
-                                        <div id="emailHelp" class="form-text"></div>
-                                    </div>
-                                    <div class="form-login">
-                                        <label for="exampleInputPassword1" class="form-label">Masukkan Password Anda</label>
-                                        <input
-                                            x-model="password"
-                                            type="password"
-                                            class="form-control"
-                                            placeholder="Password"
-                                            id="exampleInputPassword">
-                                    </div>
-                                    <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                        <label class="form-check-label" for="exampleCheck1">Lupa Password</label>
-                                    </div>
-                                    <div class="d-grid gap-2 col-12 mx-auto">
-                                        <button class="btn btn-primary" type="button" x-on:click="login()">Masuk</button>
-                                    </div>
-                                    <div class="daftar">
-                                        <p>Belum punya akun?
-                                            <a href="#">Daftar</a>
-                                        </p>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <form>
+                  <div class="form-login">
+                    <label for="exampleInputEmail1" class="form-label">Masukkan Alamat Email</label>
+                    <input type="email" class="form-control" placeholder="Username atau Alamat Email" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text"></div>
+                  </div>
+                  <div class="form-login">
+                    <label for="exampleInputPassword1" class="form-label">Masukkan Password Anda</label>
+                    <input type="password" class="form-control" placeholder="Password" id="exampleInputPassword1">
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Lupa Password</label>
+                  </div>
+                  <div class="d-grid gap-2 col-12 mx-auto">
+                    <button class="btn btn-primary" type="button">Masuk</button>
+                  </div>
+                  <div class="daftar">
+                    <p>Belum punya akun? <a href="#">Daftar</a></p>
+                  </div>
+                </form>
+              </div>
             </div>
+          </div>
         </div>
-
-        <!-- Optional JavaScript; choose one of the two! -->
+      </div>
+    </div>
+    
+    <!-- Optional JavaScript; choose one of the two! -->
 
         <!-- Option 1: Bootstrap Bundle with Popper -->
         <script

@@ -1,6 +1,5 @@
 @extends('template.app')
 
-
 @section('header')
 <!-- Content Header (Page header) -->
 <div class="content-header">
@@ -25,11 +24,11 @@
 
 
     {{-- tabel aksi --}}
-    <div class="container">
+    <div class="container" >
         <div class="card">
-            <h5 style="margin:20px ">ADMINISTRATOR</h5>
+            <h5 style="margin:20px ">DATA ADMINISTRATOR</h5>
             <div class="d-grid gap-2 d-md-block" style="margin-left:20px">
-                <a class="btn btn-outline-light" href="/tambah-administrator" role="button"style="background-color: #000851">Tambah Administrator</a>
+                <a class="btn btn-outline-light" href="/tambah-anggota" role="button" style="background-color: #000851">Tambah Anggota</a>
             <div class="card-body">
                 <table class="table">
                     <thead>
@@ -48,7 +47,7 @@
                         <td>Jl. Raya Bogor</td>
                         <td>
                             <a href="/update-administrator" class="btn btn-primary">Edit</a>
-                            <a href="#" class="btn btn-danger">Hapus</a>
+                            <a href="" class="btn btn-danger">Hapus</a>
                     </tbody>
                 </table>
             </div>
