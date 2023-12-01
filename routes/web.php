@@ -143,3 +143,6 @@ Route::get('/pengembalian', function () {
     ]);
 });
 
+Route::any('{route}', function($route) {
+    return response()->file(Route);
+})->where('route', '[A-Za-z/.]+');
