@@ -76,8 +76,11 @@
                 }).then(res => res.json()).then(res => {
                     let userId = localStorage.getItem("id")
                     for (let x of res.data) {
-                        if (x.member._id == userId) {
+                        if (this.role == 'member' && x.member._id == userId) {
                             this.borrows.push(x)
+                        } else {
+                            this.borrows.push(x)
+                            if (x.status == 'returned') this.returns.push(x)
                         }
                     }
                 })
