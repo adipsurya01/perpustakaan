@@ -99,12 +99,7 @@
                 <div class="col-sm-8">
                     <select class="form-control" x-model="form.id_member">
                         <template x-for="(x, i) in members">
-                            <template x-if="i == 0">
-                                <option selected x-bind:value="x._id" x-html="x.fullname"></option>
-                            </template>
-                            <template x-else>
-                                <option x-bind:value="x._id" x-html="x.fullname"></option>
-                            </template>
+                            <option x-bind:value="x._id" x-html="x.fullname"></option>
                         </template>
                     </select>
                 </div>
@@ -115,12 +110,7 @@
                 <div class="col-sm-8">
                     <select class="form-control" x-model="form.id_book">
                         <template x-for="(x, i) in books">
-                            <template x-if="i == 0">
-                                <option selected x-bind:value="x._id" x-html="x.title"></option>
-                            </template>
-                            <template x-else>
-                                <option x-bind:value="x._id" x-html="x.title"></option>
-                            </template>
+                            <option x-bind:value="x._id" x-html="x.title"></option>
                         </template>
                     </select>
                 </div>
