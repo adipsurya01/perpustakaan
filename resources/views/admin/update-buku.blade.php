@@ -66,8 +66,26 @@
                     },
                     body: JSON.stringify(this)
                 }).then(res => res.json()).then(res => {
-                    location.href = "/data-buku"
+                    this.uploadPicture()
                 })
+            },
+            uploadPicture(event) {
+                let token = localStorage.getItem("token")
+                let picture = document.getElementById("picture")
+                const file = picture.files[0];
+                if (file) {
+                    const boundary = `----WebKitFormBoundary${Math.random() * 1e16}`;
+                    const formData = new FormData();
+                    formData.append('file', file);
+                    const xhr = new XMLHttpRequest();
+                    xhr.open('PUT', `http://0.0.0.0:3030/books/${this.id}/picture`);
+                    xhr.setRequestHeader('Authorization', `Bearer ${token}`);
+                    xhr.send(formData);
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState === 4 && xhr.status === 200) location.href = "/data-buku"
+                        else console.error('Error uploading file:', xhr.statusText);
+                    };
+                } else location.href = "/data-buku"
             }
         }))
     </script>
@@ -76,7 +94,18 @@
 @section('content')
     <div class="container" style="">
         <div class="card">
-            <h5 style="margin:20px ">TAMBAH DATA BUKU</h5>
+            <h5 style="margin:20px ">UPDATE DATA BUKU</h5>
+            <div class="mb-3 row m-3">
+                <label for="picture" class="col-sm-2 col-form-label">Sampul Buku</label>
+                <div class="col-sm-8">
+                    <div class="input-group">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="picture">
+                            <label class="custom-file-label" for="picture">Pilih File</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="mb-3 row m-3">
                 <label for="inputJudulBuku" class="col-sm-2 col-form-label">Judul Buku</label>
                 <div class="col-sm-8">

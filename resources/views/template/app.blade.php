@@ -45,19 +45,25 @@
         </div>
 
         <!-- Navbar -->
-        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light" x-bind:style="location.pathname == '/' ? 'margin-left: 0 !important' : ''">
             <!-- Left navbar links -->
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i
-                            class="fas fa-bars"></i></a>
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a onclick="localStorage.clear();location.href='/login'" class="nav-link" href="#" role="button">
-                        <i class="fas fa-sign-out-alt"></i>
-                    </a>
+                    <template x-if="location.pathname == '/'">
+                        <a onclick="location.href = localStorage.getItem('token') == null ? '/login' : '/dashboard'" class="nav-link" href="#" role="button">
+                            <i class="fas fa-sign-in-alt"></i>
+                        </a>
+                    </template>
+                    <template x-if="location.pathname != '/'">
+                        <a onclick="localStorage.clear();location.href='/login'" class="nav-link" href="#" role="button">
+                            <i class="fas fa-sign-out-alt"></i>
+                        </a>
+                    </template>
                 </li>
             </ul>
         </nav>
@@ -66,7 +72,7 @@
         @include('template.sidebar')
 
         <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper">
+        <div class="content-wrapper" x-bind:style="location.pathname == '/' ? 'margin-left: 0 !important' : ''">
             @yield('header')
 
             @yield('content')
