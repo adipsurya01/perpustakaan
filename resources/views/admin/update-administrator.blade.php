@@ -32,7 +32,7 @@
             "id": "{{ $id }}",
             init() {
                 let token = localStorage.getItem("token")
-                fetch(`http://0.0.0.0:3030/members?id=${this.id}`, {
+                fetch(`http://localhost:3030/members?id=${this.id}`, {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",
@@ -56,7 +56,7 @@
                     "_method": "PUT"
                 }
                 if (this.password != "") data["password"] = this.password
-                fetch(`http://0.0.0.0:3030/members/${this.id}`, {
+                fetch(`http://localhost:3030/members/${this.id}`, {
                     method: "PUT",
                     headers: {
                         "Content-Type": "application/json",
@@ -113,7 +113,7 @@
             </div>
 
             <div class="d-grid gap-2 d-md-block p-3" style="margin-left: 182px; gap:50px">
-                <button x-on:click="edit" class="btn btn-primary" type="button">Edit</button>
+                <button x-on:click="edit" class="btn btn-primary" type="button">Ubah</button>
                 <a href="/data-administrator" class="btn btn-danger" type="button">Batal</a>
             </div>
         </div>

@@ -6,7 +6,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Edit Data Anggota</h1>
+                    <h1 class="m-0">Ubah Data Anggota</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -32,7 +32,7 @@
             "id": "{{ $id }}",
             init() {
                 let token = localStorage.getItem("token")
-                fetch(`http://0.0.0.0:3030/members?id=${this.id}`, {
+                fetch(`http://localhost:3030/members?id=${this.id}`, {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",
@@ -56,7 +56,7 @@
                     "_method": "PUT"
                 }
                 if (this.password != "") data["password"] = this.password
-                fetch(`http://0.0.0.0:3030/members/${this.id}`, {
+                fetch(`http://localhost:3030/members/${this.id}`, {
                     method: "PUT",
                     headers: {
                         "Content-Type": "application/json",
@@ -75,7 +75,7 @@
 @section('content')
     <div class="container" style="">
         <div class="card">
-            <h5 style="margin:20px ">Edit DATA ANGGOTA</h5>
+            <h5 style="margin:20px ">UBAH DATA ANGGOTA</h5>
             <div class="mb-3 row m-3">
                 <label for="inputNama" class="col-sm-2 col-form-label">Nama Lengkap</label>
                 <div class="col-sm-8">
@@ -113,7 +113,7 @@
             </div>
 
             <div class="d-grid gap-2 d-md-block p-3" style="margin-left: 182px; gap:50px">
-                <button x-on:click="edit" class="btn btn-primary" type="button">Edit</button>
+                <button x-on:click="edit" class="btn btn-primary" type="button">Ubah</button>
                 <a href="/data-anggota" class="btn btn-danger" type="button">Batal</a>
             </div>
         </div>

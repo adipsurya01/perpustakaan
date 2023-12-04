@@ -31,7 +31,7 @@
             "phone": "",
             add() {
                 let token = localStorage.getItem("token")
-                fetch("http://0.0.0.0:3030/members", {
+                fetch("http://localhost:3030/members", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",

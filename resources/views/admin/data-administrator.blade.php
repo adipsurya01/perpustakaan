@@ -28,7 +28,7 @@
             role: localStorage.getItem("role"),
             init() {
                 let token = localStorage.getItem("token")
-                fetch("http://0.0.0.0:3030/members", {
+                fetch("http://localhost:3030/members", {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",
@@ -44,7 +44,7 @@
                 let token = localStorage.getItem("token")
                 if (!confirm("yakin hapus ?")) return;
                 console.log("YES")
-                fetch(`http://0.0.0.0:3030/members/${data._id}`, {
+                fetch(`http://localhost:3030/members/${data._id}`, {
                     method: "DELETE",
                     headers: {
                         "Content-Type": "application/json",
@@ -83,12 +83,12 @@
                             <template x-for="(x, i) in members">
                                 <tr>
                                     <td x-html="i+1">1</td>
-                                    <td x-html="x.fullname">Adip Idi Surya</td>
-                                    <td x-html="x.email">adip@gmail.com</td>
-                                    <td x-html="x.phone">08123456789</td>
-                                    <td x-html="x.address">Jl. Raya Bogor</td>
+                                    <td x-html="x.fullname"></td>
+                                    <td x-html="x.email"></td>
+                                    <td x-html="x.phone"></td>
+                                    <td x-html="x.address"></td>
                                     <td>
-                                        <button x-on:click="edit(x)" class="btn btn-primary">Edit</button>
+                                        <button x-on:click="edit(x)" class="btn btn-primary">Ubah</button>
                                         <button x-on:click="deletes(x)" class="btn btn-danger">Hapus</button>
                                     </td>
                                 </tr>

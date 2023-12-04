@@ -35,7 +35,7 @@
             "id": "",
             add() {
                 let token = localStorage.getItem("token")
-                fetch("http://0.0.0.0:3030/books", {
+                fetch("http://localhost:3030/books", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -56,7 +56,7 @@
                     const formData = new FormData();
                     formData.append('file', file);
                     const xhr = new XMLHttpRequest();
-                    xhr.open('PUT', `http://0.0.0.0:3030/books/${this.id}/picture`);
+                    xhr.open('PUT', `http://localhost:3030/books/${this.id}/picture`);
                     xhr.setRequestHeader('Authorization', `Bearer ${token}`);
                     xhr.send(formData);
                     xhr.onreadystatechange = function() {

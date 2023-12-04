@@ -28,7 +28,7 @@
             role: localStorage.getItem("role"),
             init() {
                 let token = localStorage.getItem("token")
-                fetch("http://0.0.0.0:3030/books", {
+                fetch("http://localhost:3030/books", {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",
@@ -41,7 +41,7 @@
             deletes(data) {
                 let token = localStorage.getItem("token")
                 if (!confirm("yakin hapus ?")) return;
-                fetch(`http://0.0.0.0:3030/books/${data._id}`, {
+                fetch(`http://localhost:3030/books/${data._id}`, {
                     method: "DELETE",
                     headers: {
                         "Content-Type": "application/json",
@@ -82,12 +82,12 @@
                                 <tr>
                                     <td x-html="i+1"></th>
                                         <td x-html="b.title"></td>
-                                        <td x-html="b.author">Adip</td>
-                                        <td x-html="b.publisher">Universitas Negeri Jakarta</td>
-                                        <td x-html="b.stock">80</td>
-                                        <td x-html="b.pages">100</td>
+                                        <td x-html="b.author"></td>
+                                        <td x-html="b.publisher"></td>
+                                        <td x-html="b.stock"></td>
+                                        <td x-html="b.pages"></td>
                                         <td>
-                                            <button x-on:click="edit(b)" class="btn btn-primary">Edit</button>
+                                            <button x-on:click="edit(b)" class="btn btn-primary">Ubah</button>
                                             <button x-on:click="deletes(b)" class="btn btn-danger">Hapus</button>
                                         </td>
                                 </tr>

@@ -30,6 +30,7 @@
     <!-- summernote -->
     <link rel="stylesheet" href="/plugins/summernote/summernote-bs4.min.css">
     <script src="//unpkg.com/alpinejs"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     @yield("script")
 </head>
 
@@ -121,6 +122,7 @@
     <script>
         if (localStorage.getItem("token") == null) location.href = "/login"
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

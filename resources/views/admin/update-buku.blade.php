@@ -36,7 +36,7 @@
             "_method": "PUT",
             init() {
                 let token = localStorage.getItem("token")
-                fetch(`http://0.0.0.0:3030/books?id=${this.id}`, {
+                fetch(`http://localhost:3030/books?id=${this.id}`, {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",
@@ -58,7 +58,7 @@
             edit() {
                 let token = localStorage.getItem("token")
                 console.log(JSON.stringify(this))
-                fetch(`http://0.0.0.0:3030/books/${this.id}`, {
+                fetch(`http://localhost:3030/books/${this.id}`, {
                     method: "PUT",
                     headers: {
                         "Content-Type": "application/json",
@@ -78,7 +78,7 @@
                     const formData = new FormData();
                     formData.append('file', file);
                     const xhr = new XMLHttpRequest();
-                    xhr.open('PUT', `http://0.0.0.0:3030/books/${this.id}/picture`);
+                    xhr.open('PUT', `http://localhost:3030/books/${this.id}/picture`);
                     xhr.setRequestHeader('Authorization', `Bearer ${token}`);
                     xhr.send(formData);
                     xhr.onreadystatechange = function() {
@@ -162,7 +162,7 @@
             </div>
 
             <div class="d-grid gap-2 d-md-block p-3" style="margin-left: 182px; gap:50px">
-                <button x-on:click="edit" class="btn btn-primary" type="button">Edit</button>
+                <button x-on:click="edit" class="btn btn-primary" type="button">Ubah</button>
                 <a href="/data-buku" class="btn btn-danger" type="button">Batal</a>
             </div>
         </div>

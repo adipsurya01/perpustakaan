@@ -51,7 +51,7 @@
                         <a href="/data-anggota" class="nav-link {{ $active == 'data-anggota' ? 'active' : '' }}">
                             <i class="nav-icon fas fa-user"></i>
                             <p>
-                                Member
+                                Anggota
                             </p>
                         </a>
                     </li>
@@ -65,7 +65,7 @@
                     </li>
                     <li class="nav-item" x-bind:class="role == 'admin' ? '' : 'd-none'">
                         <a href="/peminjaman" class="nav-link {{ $active == 'peminjaman' ? 'active' : '' }}">
-                            <i class="fas fa-book-reader"></i>
+                            <i class="nav-icon fas fa-book-reader"></i>
                             <p>
                                 Transaksi
                             </p>

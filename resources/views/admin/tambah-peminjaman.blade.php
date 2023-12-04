@@ -47,7 +47,7 @@
                 return `${d.getFullYear()}-${m}-${dt}`
             },
             getMembers(token) {
-                fetch("http://0.0.0.0:3030/members", {
+                fetch("http://localhost:3030/members", {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",
@@ -59,7 +59,7 @@
                 })
             },
             getBooks(token) {
-                fetch("http://0.0.0.0:3030/books", {
+                fetch("http://localhost:3030/books", {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",
@@ -73,7 +73,7 @@
             borrow() {
                 let token = localStorage.getItem("token")
                 console.log(JSON.stringify(this.form))
-                fetch("http://0.0.0.0:3030/borrows", {
+                fetch("http://localhost:3030/borrows", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -95,7 +95,7 @@
             <h5 style="margin:20px ">TRANSAKSI PEMINJAMAN</h5>
 
             <div class="mb-3 row m-3">
-                <label for="inputNoPinjam" class="col-sm-2 col-form-label">Member</label>
+                <label for="inputNoPinjam" class="col-sm-2 col-form-label">Nama Anggota</label>
                 <div class="col-sm-8">
                     <select class="form-control" x-model="form.id_member">
                         <template x-for="(x, i) in members">

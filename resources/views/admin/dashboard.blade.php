@@ -44,7 +44,7 @@
                 return `${d.getFullYear()}-${m}-${dt}`
             },
             getBooks(token) {
-                fetch("http://0.0.0.0:3030/books", {
+                fetch("http://localhost:3030/books", {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",
@@ -55,7 +55,7 @@
                 })
             },
             getMembers(token) {
-                fetch("http://0.0.0.0:3030/members", {
+                fetch("http://localhost:3030/members", {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",
@@ -67,7 +67,7 @@
                 })
             },
             getBorrows(token) {
-                fetch("http://0.0.0.0:3030/borrows", {
+                fetch("http://localhost:3030/borrows", {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",
@@ -101,7 +101,7 @@
                         <div class="small-box bg-green">
                             <div class="inner">
                                 <h3 x-html="members.length">150</h3>
-                                <p>Total Siswa</p>
+                                <p>Total Anggota</p>
                             </div>
                             <div class="icon">
                                 <i class="fas fa-users"></i>
@@ -175,10 +175,10 @@
                                 <template x-for="(x, i) in members">
                                     <tr>
                                         <td x-html="i+1">1</td>
-                                        <td x-html="x.fullname">Adip Idi Surya</td>
-                                        <td x-html="x.email">adip@gmail.com</td>
-                                        <td x-html="x.phone">08123456789</td>
-                                        <td x-html="x.address">Jl. Raya Bogor</td>
+                                        <td x-html="x.fullname"></td>
+                                        <td x-html="x.email"></td>
+                                        <td x-html="x.phone"></td>
+                                        <td x-html="x.address"></td>
                                     </tr>
                                 </template>
                             </tbody>

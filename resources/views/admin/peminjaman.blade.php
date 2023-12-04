@@ -28,7 +28,7 @@
             borrows: [],
             init() {
                 let token = localStorage.getItem("token")
-                fetch("http://0.0.0.0:3030/borrows", {
+                fetch("http://localhost:3030/borrows", {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",
@@ -46,7 +46,7 @@
             },
             returns(data) {
                 let token = localStorage.getItem("token")
-                fetch(`http://0.0.0.0:3030/borrows/${data._id}`, {
+                fetch(`http://localhost:3030/borrows/${data._id}`, {
                     method: "PUT",
                     headers: {
                         "Content-Type": "application/json",
